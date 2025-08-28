@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 
 export default function ConservationImpact() {
   const { counters, loading: countersLoading } = useGlobalCounters()
-  const [selectedTimeframe] = useState('all-time')
 
   // Simulated real-time updates
   const [liveUpdates, setLiveUpdates] = useState({
