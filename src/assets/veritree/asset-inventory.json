@@ -1,0 +1,23 @@
+{
+  "totalAssets": 2,
+  "categories": {
+    "images": 4,
+    "videos": 0,
+    "logos": 0,
+    "backgrounds": 1,
+    "icons": 0,
+    "testimonials": 0
+  },
+  "timestamp": "2025-08-27T23:41:41.161Z",
+  "downloadedFrom": [
+    "https://www.veritree.com",
+    "https://www.veritree.com/about",
+    "https://www.veritree.com/solutions",
+    "https://www.veritree.com/technology",
+    "https://www.veritree.com/impact",
+    "https://www.veritree.com/blog",
+    "https://www.veritree.com/contact",
+    "https://www.veritree.com/careers",
+    "https://www.veritree.com/"
+  ]
+}

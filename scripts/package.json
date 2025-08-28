@@ -1,0 +1,12 @@
+{
+  "name": "veritree-asset-downloader",
+  "version": "1.0.0",
+  "description": "Downloads all visual assets from Veritree website",
+  "main": "download-veritree-assets.js",
+  "scripts": {
+    "download": "node download-veritree-assets.js"
+  },
+  "dependencies": {
+    "playwright": "^1.40.0"
+  }
+}

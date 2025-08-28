@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 20 14.3% 4.1%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 14.3% 4.1%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --primary: 142 76% 36%; /* bamboo-500 */
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 142 69% 58%; /* bamboo-400 */
+    --secondary-foreground: 355.7 100% 97.3%;
+    --muted: 60 4.8% 95.9%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --accent: 142 69% 58%; /* bamboo-400 */
+    --accent-foreground: 355.7 100% 97.3%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 20 5.9% 90%;
+    --input: 20 5.9% 90%;
+    --ring: 142 76% 36%; /* bamboo-500 */
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 20 14.3% 4.1%;
+    --foreground: 60 9.1% 97.8%;
+    --card: 20 14.3% 4.1%;
+    --card-foreground: 60 9.1% 97.8%;
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 60 9.1% 97.8%;
+    --primary: 142 84% 67%; /* bamboo-300 */
+    --primary-foreground: 355.7 100% 97.3%;
+    --secondary: 142 69% 58%; /* bamboo-400 */
+    --secondary-foreground: 355.7 100% 97.3%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 24 5.4% 63.9%;
+    --accent: 142 69% 58%; /* bamboo-400 */
+    --accent-foreground: 355.7 100% 97.3%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 24 5.7% 82.9%;
+    --input: 24 5.7% 82.9%;
+    --ring: 142 84% 67%; /* bamboo-300 */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    @apply font-sans antialiased;
+  }
+}
+
+@layer components {
+  /* Custom EcoFloss components */
+  .nature-gradient {
+    background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  }
+  
+  .bamboo-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2322c55e' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+
+  .conservation-counter {
+    @apply text-4xl font-bold text-bamboo-600 animate-counter-up;
+  }
+}
