@@ -7,31 +7,32 @@ export function useProducts() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
 
-  useEffect(() => {
-    async function fetchProducts() {
-      try {
-        const { data, error } = await supabase
-          .from('products')
-          .select('*')
-          .eq('is_active', true)
-          .order('created_at', { ascending: true })
+  const fetchProducts = async () => {
+    try {
+      setLoading(true)
+      const { data, error } = await supabase
+        .from('products')
+        .select('*')
+        .eq('is_active', true)
+        .order('created_at', { ascending: true })
 
-        if (error) {
-          setError(error.message)
-        } else {
-          setProducts(data || [])
-        }
-      } catch (err) {
-        setError(err instanceof Error ? err.message : 'An error occurred')
-      } finally {
-        setLoading(false)
+      if (error) {
+        setError(error.message)
+      } else {
+        setProducts(data || [])
       }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred')
+    } finally {
+      setLoading(false)
     }
+  }
 
+  useEffect(() => {
     fetchProducts()
   }, [])
 
-  return { products, loading, error, refetch: () => fetchProducts() }
+  return { products, loading, error, refetch: fetchProducts }
 }
 
 export function useGlobalCounters() {

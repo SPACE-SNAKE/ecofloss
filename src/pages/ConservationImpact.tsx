@@ -1,12 +1,12 @@
 import { useState, useEffect } from 'react'
-import { TreePine, Heart, Users, MapPin, TrendingUp, Download, Share, Calendar, Leaf, Zap } from 'lucide-react'
+import { TreePine, Heart, Users, MapPin, Download, Share, Calendar, Leaf, Zap } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { useGlobalCounters } from '@/hooks/useProducts'
 import { Link } from 'react-router-dom'
 
 export default function ConservationImpact() {
   const { counters, loading: countersLoading } = useGlobalCounters()
-  const [selectedTimeframe, setSelectedTimeframe] = useState('all-time')
+  const [selectedTimeframe] = useState('all-time')
 
   // Simulated real-time updates
   const [liveUpdates, setLiveUpdates] = useState({

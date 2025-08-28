@@ -46,3 +46,4 @@ coverage/
 # Windows
 ehthumbs.db
 Thumbs.db
+.vercel
